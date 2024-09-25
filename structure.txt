@@ -1,0 +1,60 @@
+crypto-wallet-app/
+│
+├── /android/                 # Native Android code
+├── /ios/                     # Native iOS code
+├── /src/
+│   ├── /assets/              # Images, fonts, etc.
+│   ├── /components/          # Reusable UI components
+│   ├── /navigation/          # Navigation setup (React Navigation)
+│   ├── /screens/             # App screens (Home, Wallet, Send, etc.)
+│   ├── /services/            # Blockchain interaction, API calls
+│   ├── /store/               # Redux or Context API for state management
+│   ├── /utils/               # Helper functions
+│   ├── /hooks/               # Custom hooks
+│   ├── /themes/              # Theme configurations, NativeWind CSS
+│   ├── /config/              # Environment configs, constants
+│   ├── /models/              # Data models, TypeScript interfaces
+│   └── App.js                # Main entry point
+│
+├── .env                      # Environment variables
+├── babel.config.js           # Babel configuration
+├── package.json              # Project dependencies and scripts
+└── README.md                 # Project documentation
+
+
+/services/
+│
+├── /blockchain/
+│   ├── bitcoinService.js        # Functions to interact with Bitcoin blockchain
+│   ├── ethereumService.js       # Functions to interact with EVM blockchains
+│   ├── solanaService.js         # Functions to interact with Solana blockchain
+│   ├── transactionService.js    # Common transaction functions across blockchains
+│   └── walletService.js         # Functions for wallet creation, import, export
+│
+├── /api/
+│   ├── coingeckoService.js      # Fetch cryptocurrency price data
+│   ├── etherscanService.js      # Fetch Ethereum transaction history
+│   ├── solscanService.js        # Fetch Solana transaction history
+│   └── otherApiService.js       # Interact with other APIs
+│
+├── /security/
+│   ├── encryptionService.js     # Encrypt/decrypt data, manage secure storage
+│   ├── keyManagementService.js  # Generate/manage keys, seed phrases
+│   └── authService.js           # Handle user authentication, biometrics
+│
+├── /utils/
+│   ├── cacheService.js          # Cache frequently accessed data
+│   ├── networkService.js        # Check network connectivity, handle retries
+│   ├── notificationService.js   # Handle push notifications, alerts
+│   └── configService.js         # Manage environment-specific configurations
+│
+└── index.js                     # Optional: Aggregate exports for easy imports
+
+
+stores/
+│
+├── networkStore.js      # Manages the state of active blockchain networks
+├── userStore.js         # Manages user-specific state, such as authentication and wallet information
+├── walletStore.js       # Manages state related to wallets, including balances, transactions, and tokens
+├── nftStore.js          # Manages state related to NFTs across different chains
+└── settingsStore.js     # Manages application settings, such as theme, language, etc.
